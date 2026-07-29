@@ -47,12 +47,13 @@ nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .hero .lede{font-size:18px;color:var(--muted);max-width:52ch;min-width:0}
 .hero .actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
 
-/* announcement strip */
-.announce{display:flex;align-items:center;gap:16px;flex-wrap:wrap;
-  padding:22px 26px;background:var(--cream);border:3px solid var(--ink);margin:40px 0}
-.announce .lbl{font-family:var(--display);font-weight:800;font-size:12px;letter-spacing:.1em;
-  text-transform:uppercase;color:#fff;background:var(--ink);padding:6px 12px}
-.announce .msg{font-family:var(--display);font-weight:700;font-size:clamp(16px,2.4vw,21px);text-transform:uppercase}
+/* news list */
+.newslist{list-style:none;margin:0;padding:0;border-top:3px solid var(--ink)}
+.newsitem{display:grid;grid-template-columns:120px 1fr;gap:26px;padding:26px 0;border-bottom:2px solid var(--line);align-items:start}
+.newsitem .date{font-family:var(--display);font-weight:800;color:var(--orange);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.newsitem p{margin:0 0 12px;font-size:clamp(17px,2.2vw,20px);color:var(--ink);line-height:1.45}
+.newsitem .read{font-family:var(--display);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.02em;color:var(--orange)}
+.newsitem .read:hover{text-decoration:underline}
 
 /* ---- interior page hero ---- */
 .phero{padding:56px 0 46px;border-bottom:3px solid var(--ink);background:var(--cream)}
@@ -101,9 +102,10 @@ section{padding:66px 0}
 .pi .role{font-family:var(--display);font-weight:700;color:var(--orange);text-transform:uppercase;font-size:14px;letter-spacing:.04em;margin-bottom:14px}
 .pi p{color:var(--muted);font-size:15.5px;margin:0 0 12px}
 .pi .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
-.pi .links a{font-family:var(--display);font-weight:700;font-size:12px;text-transform:uppercase;
+.pi .links a,.pi .links .pill{font-family:var(--display);font-weight:700;font-size:12px;text-transform:uppercase;
   border:2px solid var(--ink);padding:8px 14px}
 .pi .links a:hover{background:var(--ink);color:#fff}
+.pi .links .pill{color:var(--muted)}
 .open{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .slot{border:3px solid var(--ink);padding:26px 22px;background:#fff}
 .slot h3{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:18px;margin-bottom:10px}
@@ -191,6 +193,7 @@ footer{background:var(--ink);color:#b7b1a7;padding:28px 0;font-family:var(--disp
   .hero .kick{margin-bottom:20px;font-size:12px}
   .hero .row{padding:30px 0 40px}
   .hero .lede{font-size:16.5px}
+  .newsitem{grid-template-columns:1fr;gap:6px}
   .hero .actions{gap:10px}
   .hero .actions .btn{flex:1;text-align:center;padding:14px 12px}
   section{padding:46px 0}
