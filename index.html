@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!-- OPTION 3 — "Bold Grid": oversized type, card grid, UT burnt orange forward. Energetic. -->
+<!-- NOTE: eremin@utexas.edu is a PLACEHOLDER email — confirm the real one before publishing. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eremin Group · UT Austin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fff; --ink:#141210; --muted:#57514a; --line:#e7e3dc;
+    --orange:#BF5700; --orange-d:#9a4600; --char:#141210; --cream:#f6f2ea;
+    --display:"Archivo",-apple-system,sans-serif;
+    --sans:"Inter",-apple-system,sans-serif;
+    --wrap:1200px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .cell,.r,.grid3,.hero .row,.synth{min-width:0}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 30px}
+  h1,h2,h3{font-family:var(--display);margin:0;line-height:.98;letter-spacing:-.02em}
+
+  header{position:sticky;top:0;z-index:30;background:#fff;border-bottom:3px solid var(--ink)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{font-family:var(--display);font-weight:900;font-size:19px;letter-spacing:-.02em;text-transform:uppercase}
+  .brand b{color:var(--orange)}
+  .navlinks{display:flex;gap:4px;font-family:var(--display);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.02em}
+  .navlinks a{padding:8px 13px;border-radius:2px}
+  .navlinks a:hover{background:var(--orange);color:#fff}
+  /* CSS-only mobile menu */
+  .navtoggle{display:none}
+  .hamb{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px 4px}
+  .hamb span{width:26px;height:3px;background:var(--ink);display:block;transition:.2s}
+
+  /* hero */
+  .hero{padding:70px 0 0}
+  .hero .kick{display:inline-block;background:var(--orange);color:#fff;font-family:var(--display);
+    font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:7px 14px;margin-bottom:26px}
+  .hero h1{font-weight:900;font-size:clamp(26px,7.5vw,92px);text-transform:uppercase;color:var(--ink);
+    overflow-wrap:break-word}
+  .hero h1 .o{color:var(--orange);-webkit-text-stroke:0}
+  .hero .row{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;
+    padding:40px 0 60px;border-bottom:3px solid var(--ink);margin-top:26px}
+  .hero .lede{font-size:18px;color:var(--muted);max-width:52ch}
+  .hero .actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+  .btn{font-family:var(--display);font-weight:700;font-size:15px;text-transform:uppercase;
+    background:var(--ink);color:#fff;padding:15px 24px;border:2px solid var(--ink)}
+  .btn:hover{background:var(--orange);border-color:var(--orange)}
+  .btn.o{background:var(--orange);border-color:var(--orange)}
+  .btn.o:hover{background:#fff;color:var(--orange)}
+
+  /* big section headers */
+  section{padding:76px 0}
+  .stripe{display:flex;align-items:center;gap:16px;margin-bottom:38px}
+  .stripe .no{font-family:var(--display);font-weight:900;font-size:15px;color:#fff;background:var(--orange);
+    width:38px;height:38px;display:flex;align-items:center;justify-content:center}
+  .stripe h2{font-weight:800;font-size:clamp(26px,4vw,40px);text-transform:uppercase}
+
+  /* research cards */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:3px solid var(--ink)}
+  .cell{padding:34px 30px;border-right:3px solid var(--ink)}
+  .cell:last-child{border-right:0}
+  .cell .tag{font-family:var(--display);font-weight:800;font-size:12px;letter-spacing:.1em;color:var(--orange);text-transform:uppercase;margin-bottom:18px}
+  .cell h3{font-weight:800;font-size:22px;text-transform:uppercase;margin-bottom:14px;line-height:1}
+  .cell .fig{width:100%;display:block;border:2px solid var(--ink);background:#fff;margin:0 0 16px}
+  .cell p{color:var(--muted);font-size:15.5px;margin:0}
+  .cell:hover{background:var(--cream)}
+  .synth{margin-top:24px;background:var(--ink);color:#fff;padding:34px 36px;display:grid;
+    grid-template-columns:auto 1fr;gap:28px;align-items:center}
+  .synth h3{font-family:var(--display);font-weight:800;font-size:20px;text-transform:uppercase;color:var(--orange);white-space:nowrap}
+  .synth p{margin:0;color:#d8d2c8;font-size:15.5px}
+
+  /* team */
+  .altbg{background:var(--cream)}
+  .pi{display:grid;grid-template-columns:170px 1fr;gap:34px;align-items:center;
+    background:#fff;border:3px solid var(--ink);padding:32px;margin-bottom:26px}
+  .mug{width:170px;height:212px;object-fit:cover;object-position:center 22%;
+    border:3px solid var(--ink);background:var(--orange);display:block}
+  .pi h3{font-weight:900;font-size:25px;text-transform:uppercase;margin-bottom:6px}
+  .pi .role{font-family:var(--display);font-weight:700;color:var(--orange);text-transform:uppercase;font-size:14px;letter-spacing:.04em;margin-bottom:12px}
+  .pi p{color:var(--muted);font-size:15.5px;margin:0}
+  .open{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .slot{border:3px solid var(--ink);padding:26px 20px;background:#fff}
+  .slot .plus{font-family:var(--display);font-weight:900;font-size:28px;color:var(--orange);line-height:1}
+  .slot .nm{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:16px;margin-top:10px}
+  .slot .st{color:var(--muted);font-size:13px}
+
+  /* lists */
+  .rows{border-top:3px solid var(--ink)}
+  .r{display:grid;grid-template-columns:130px 1fr;gap:24px;padding:22px 0;border-bottom:2px solid var(--line);align-items:baseline}
+  .r .yr{font-family:var(--display);font-weight:900;color:var(--orange);font-size:18px}
+  .r .tx{font-size:16.5px}
+  .r .tx em{color:var(--muted)}
+
+  /* contact */
+  .cta-block{background:var(--orange);color:#fff;padding:60px 0}
+  .cta-block h2{font-family:var(--display);font-weight:900;font-size:clamp(28px,4.5vw,48px);text-transform:uppercase;margin-bottom:18px}
+  .cta-block p{font-size:17px;max-width:60ch;color:#ffe9d8;margin:0 0 26px}
+  .cta-block .btn{background:#fff;color:var(--orange);border-color:#fff}
+  .cta-block .btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .cta-block .addr{margin-top:34px;font-family:var(--display);font-weight:600;font-size:16px;line-height:1.7;opacity:.95}
+
+  footer{background:var(--ink);color:#b7b1a7;padding:28px 0;font-family:var(--display);font-weight:600;
+    font-size:13px;text-transform:uppercase;letter-spacing:.03em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  @media(max-width:900px){
+    .hero .row{grid-template-columns:1fr;gap:26px}
+    .hero .actions{justify-content:flex-start}
+    .grid3{grid-template-columns:1fr}
+    .cell{border-right:0;border-bottom:3px solid var(--ink)}
+    .cell:last-child{border-bottom:0}
+    .synth{grid-template-columns:1fr;gap:12px}
+    .open{grid-template-columns:repeat(2,1fr)}
+    .pi{grid-template-columns:1fr;text-align:center;justify-items:center}
+    .r{grid-template-columns:1fr;gap:4px}
+    /* show hamburger, turn nav into a drop panel */
+    .hamb{display:flex}
+    .navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;
+      border-bottom:3px solid var(--ink);flex-direction:column;gap:0;padding:6px 0}
+    .navtoggle:checked ~ .navlinks{display:flex}
+    .navlinks a{padding:14px 30px;border-radius:0;font-size:15px}
+    .navtoggle:checked ~ .hamb span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+    .navtoggle:checked ~ .hamb span:nth-child(2){opacity:0}
+    .navtoggle:checked ~ .hamb span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+  }
+  /* phones */
+  @media(max-width:560px){
+    body{font-size:15.5px}
+    .wrap{padding:0 20px}
+    .hero{padding:44px 0 0}
+    .hero .kick{margin-bottom:20px;font-size:12px}
+    .hero .row{padding:30px 0 44px}
+    .hero .lede{font-size:16.5px}
+    .hero .actions{gap:10px}
+    .hero .actions .btn{flex:1;text-align:center;padding:14px 12px}
+    section{padding:52px 0}
+    .stripe{margin-bottom:26px;gap:12px}
+    .stripe .no{width:32px;height:32px}
+    .cell{padding:26px 22px}
+    .synth{padding:26px 24px}
+    .synth h3{white-space:normal}
+    .mug{width:150px;height:188px}
+    .pi{padding:26px 22px;gap:22px}
+    .open{grid-template-columns:1fr 1fr;gap:12px}
+    .slot{padding:20px 16px}
+    .cta-block{padding:46px 0}
+    .cta-block .btn{display:block;text-align:center}
+  }
+  @media(max-width:360px){
+    .open{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><nav>
+  <div class="brand">Eremin<b>/</b>Group</div>
+  <input type="checkbox" id="navtoggle" class="navtoggle" aria-label="Toggle menu">
+  <label for="navtoggle" class="hamb"><span></span><span></span><span></span></label>
+  <div class="navlinks">
+    <a href="#research">Research</a><a href="#team">Team</a><a href="#news">News</a>
+    <a href="#publications">Publications</a><a href="#contact">Contact</a>
+  </div>
+</nav></div></header>
+
+<div class="hero"><div class="wrap">
+  <span class="kick">Chemistry · UT Austin · Est. 2026</span>
+  <h1>From atoms<br>to <span class="o">algorithms.</span></h1>
+  <div class="row">
+    <p class="lede">We build AI-assisted structural data science to visualize and control molecular
+      structure at the nanoscale — connecting atomic structure to the bulk properties of real
+      materials, one crystal at a time.</p>
+    <div class="actions">
+      <a class="btn o" href="#research">Our Research</a>
+      <a class="btn" href="#contact">Join Us</a>
+    </div>
+  </div>
+</div></div>
+
+<section id="research"><div class="wrap">
+  <div class="stripe"><span class="no">01</span><h2>Research</h2></div>
+  <div class="grid3">
+    <div class="cell"><div class="tag">Thrust I</div><h3>ML-accurate diffraction</h3>
+      <img class="fig" src="thrusts/1.png" alt="PXRD-informed microED machine-learning models reconciling microED with powder X-ray diffraction">
+      <p>Machine learning that reconciles nanoscale microED with bulk powder X-ray standards — for
+        accurate, reproducible measurement.</p></div>
+    <div class="cell"><div class="tag">Thrust II</div><h3>Diffraction–Imaging MS</h3>
+      <img class="fig" src="thrusts/2.png" alt="Multimodal diffraction–imaging mass spectrometry linking microED structure with MS chemical identity">
+      <p>A multimodal platform assigning atomic structure and chemical identity crystal-by-crystal in
+        complex mixtures.</p></div>
+    <div class="cell"><div class="tag">Thrust III</div><h3>AI-driven refinement</h3>
+      <img class="fig" src="thrusts/3.png" alt="AI-driven autonomous structure refinement with a graph neural network for atomic corrections">
+      <p>Autonomous structure refinement that closes the loop between data acquisition and structure
+        elucidation.</p></div>
+  </div>
+  <div class="synth"><h3>Sustainable&nbsp;Synthesis</h3>
+    <p>We build the molecules and crystals we study — leveraging non-covalent interactions at
+      air–water interfaces for efficient synthesis of building blocks and added-value chemicals.
+      Shared infrastructure: mass spectrometry, electron microscopy, and TACC.</p></div>
+</div></section>
+
+<div class="altbg"><section id="news"><div class="wrap">
+  <div class="stripe"><span class="no">02</span><h2>News</h2></div>
+  <div class="rows">
+    <div class="r"><span class="yr">2025</span><span class="tx"><em>Spatially-Aware Diffraction Mapping Enables Fully Autonomous MicroED</em> — accepted in <em>JACS</em>.</span></div>
+    <div class="r"><span class="yr">Aug ’25</span><span class="tx">Invited talk “Teaching Machines MicroED,” ACS National Fall Meeting, Washington D.C.</span></div>
+    <div class="r"><span class="yr">2025</span><span class="tx"><strong>REyes</strong> + AutoProcess 2.0 — end-to-end, quality-driven autonomy for electron diffraction.</span></div>
+    <div class="r"><span class="yr">2026</span><span class="tx">The group opens at UT Austin — recruiting students &amp; postdocs.</span></div>
+  </div>
+</div></section></div>
+
+<section id="team"><div class="wrap">
+  <div class="stripe"><span class="no">03</span><h2>Team</h2></div>
+  <div class="pi">
+    <img class="mug" src="img/eremin.jpg" alt="Dmitry B. Eremin">
+
+    <div><h3>Dmitry B. Eremin</h3>
+      <div class="role">Principal Investigator · Asst. Professor of Chemistry</div>
+      <p>Combining physical chemistry, electron diffraction, materials science, and machine learning
+        to reveal how atomic structure gives rise to chemical properties. Previously Caltech (Nelson),
+        UCLA (Rodriguez), USC (Fokin), and the Zelinsky Institute (Ananikov).</p></div>
+  </div>
+  <div class="open">
+    <div class="slot"><div class="plus">+</div><div class="nm">Grad students</div><div class="st">Recruiting Fall 2026</div></div>
+    <div class="slot"><div class="plus">+</div><div class="nm">Postdocs</div><div class="st">Inquiries welcome</div></div>
+    <div class="slot"><div class="plus">+</div><div class="nm">Undergrads</div><div class="st">Get in touch</div></div>
+    <div class="slot"><div class="plus">✱</div><div class="nm">You?</div><div class="st">See Contact →</div></div>
+  </div>
+</div></section>
+
+<div class="altbg"><section id="publications"><div class="wrap">
+  <div class="stripe"><span class="no">04</span><h2>Publications</h2></div>
+  <div class="rows">
+    <div class="r"><span class="yr">2025</span><span class="tx">Eremin, D. B.; <em>et al.</em> “Spatially-Aware Diffraction Mapping Enables Fully Autonomous MicroED.” <em>JACS.</em></span></div>
+    <div class="r"><span class="yr">2022</span><span class="tx">“Towards Totally Defined Nanocatalysis: Deep Learning Reveals … Single Pd/C Particles.” <em>JACS</em> 144, 6071.</span></div>
+    <div class="r"><span class="yr">2021</span><span class="tx">“On-Water Selectivity Switch in Microdroplets in the 1,2,3-Triazole Synthesis.” <em>JACS</em> 143, 18374.</span></div>
+    <div class="r"><span class="yr">2017</span><span class="tx">“Understanding Active Species in Catalytic Transformations.” <em>Coord. Chem. Rev.</em> 346, 2.</span></div>
+  </div>
+  <p style="margin-top:22px"><a class="btn o" style="font-size:13px;padding:11px 18px" href="https://orcid.org/0000-0003-2946-5293">Full list · ORCID →</a></p>
+</div></section></div>
+
+<div class="cta-block" id="contact"><div class="wrap">
+  <h2>Come build the<br>future of structure.</h2>
+  <p>We're recruiting curious, rigorous students and postdocs into crystallography, mass spectrometry,
+    machine learning, and interfacial synthesis. Tell us what you want to work on.</p>
+  <a class="btn" href="mailto:eremin@utexas.edu">eremin@utexas.edu</a>
+  <div class="addr">Department of Chemistry · The University of Texas at Austin<br>105 E 24th St · Austin, TX 78712</div>
+</div></div>
+
+<footer><div class="wrap" style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:10px">
+  <span>© 2026 Eremin Group · The University of Texas at Austin</span>
+  <span>Atoms → Algorithms</span>
+</div></footer>
+
+</body>
+</html>
