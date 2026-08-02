@@ -19,7 +19,7 @@ h1,h2,h3{font-family:var(--display);margin:0;line-height:1;letter-spacing:-.02em
 header{position:sticky;top:0;z-index:30;background:#fff;border-bottom:3px solid var(--ink)}
 nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .brand{display:inline-flex;align-items:center;gap:12px;font-family:var(--display);font-weight:900;font-size:19px;letter-spacing:-.02em;text-transform:uppercase}
-.brand .brandmark{display:block;width:52px;height:52px;flex:none}
+.brand .brandmark{display:block;width:56px;height:56px;flex:none}
 .brand b{color:var(--orange)}
 .navlinks{display:flex;gap:2px;font-family:var(--display);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.02em}
 .navlinks a{padding:8px 13px;border-radius:2px;border-bottom:2px solid transparent}
