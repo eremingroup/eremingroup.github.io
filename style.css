@@ -47,7 +47,7 @@ nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .hero h1 .o{color:var(--orange)}
 .hero .lede{font-size:18px;color:var(--muted);max-width:48ch;margin:24px 0 30px;min-width:0}
 .hero .actions{display:flex;gap:14px;flex-wrap:wrap}
-.hero-art img{display:block;width:100%;border:3px solid var(--ink);box-shadow:16px 16px 0 var(--orange)}
+.hero-art img{display:block;width:100%;height:auto;border:3px solid var(--ink);box-shadow:16px 16px 0 var(--orange)}
 
 /* news list */
 .newslist{list-style:none;margin:0;padding:0;border-top:3px solid var(--ink)}
